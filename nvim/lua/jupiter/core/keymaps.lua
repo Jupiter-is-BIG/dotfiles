@@ -12,3 +12,5 @@ keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
 keymap.set("n", "<leader>x", "gg0dG") -- clear page
 keymap.set("n", "<leader>c", "0v$d") -- cut line
 keymap.set("n", "<leader>p", "$p") -- paste line
+keymap.set("n", "'", "$") -- last position in line
+keymap.set("n", ";", "0") -- first position in line
