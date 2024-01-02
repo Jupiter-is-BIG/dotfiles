@@ -22,6 +22,25 @@ dot() {
     echo ">> 📁 Dotfiles config..."
 }
 
+# bluetooth connections
+headphone() {
+    if [[ "$(blueutil --power)" == "0" ]]; then
+        blueutil --power 1
+        echo ">> 🔋 Bluetooth On"
+    fi
+    blueutil --connect f8-4e-17-a4-5d-89
+    echo ">> 🎧 Connected to headphone"
+}
+
+speaker() {
+    if [[ "$(blueutil --power)" == "0" ]]; then
+        blueutil --power 1
+        echo ">> 🔋 Bluetooth On"
+    fi
+    blueutil --connect 40-c1-f6-c2-70-35
+    echo ">> 🎧 Connected to headphone"
+}
+
 # general purpose
 l() {
     if [[ -z "$1" ]]; then
