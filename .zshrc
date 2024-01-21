@@ -21,6 +21,10 @@ dot() {
     cd ~/Desktop/dotfiles/
     echo ">> 📁 Dotfiles config..."
 }
+evim() {
+    cd ~/.config/nvim/
+    echo ">> ⚙️  in nvim config"
+}
 
 # bluetooth connections
 headphone() {

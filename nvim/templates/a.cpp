@@ -1,9 +1,9 @@
-// File {{_upper_file_}} generated on {{_lua:os.date("%y/%m/%d %H:%M")_}} by {{_author_}}
+// File generated on {{_lua:os.date("%y/%m/%d %H:%M")_}} by {{_author_}}
 
 #include <bits/stdc++.h>
 using namespace std;
 
-#define ANAND ios::sync_with_stdio(false); cin.tie(0); cout.tie(0)
+#define fastio ios::sync_with_stdio(false); cin.tie(0); cout.tie(0)
 #define rep(i, m, n)  for (long long i = m; i < n; i++)
 #define DEBUG(x) cout << "debug: " << x << "\n"
 #define PRINT(x,n) rep(i,0,n) cout << (x[i]) << " "; cout << "\n"
@@ -22,7 +22,7 @@ void SOLVE() {
 }
 
 signed main() {
-    ANAND;
+    fastio;
 
     ll _;
     cin >> _;

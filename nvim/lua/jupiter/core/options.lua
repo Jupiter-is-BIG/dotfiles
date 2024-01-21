@@ -11,7 +11,7 @@ opt.autoindent = true
 
 -- line numbers
 opt.number = true
-opt.relativenumber = true
+-- opt.relativenumber = true
 
 -- line wrapping
 opt.wrap = false
