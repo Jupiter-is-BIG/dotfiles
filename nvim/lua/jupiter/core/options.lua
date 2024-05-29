@@ -21,7 +21,7 @@ opt.ignorecase = true
 opt.smartcase = true
 
 -- cursor
-opt.cursorline = false
+opt.cursorline = true
 
 -- visuals
 opt.termguicolors = true

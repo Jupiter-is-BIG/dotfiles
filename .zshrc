@@ -160,7 +160,7 @@ make() {
 force() {
     cf
     if [[ -z "$1" ]]; then
-        echo ">> ☢️  Need dir name babe"
+        echo ">> ☢️  Need dir name"
         return 1
     fi
     mkdir $1
@@ -168,9 +168,23 @@ force() {
     nvim A.cpp
 }
 
+coverletter() {
+    cd ~/Desktop/tex/Profile/
+    # Call gen.py with the provided parameters
+    python3 ~/Desktop/tex/Profile/gen.py
+
+    echo -e "\e[33m[INFO] 😎 Generating cover letter...\e[0m"
+
+    pdflatex ~/Desktop/tex/Profile/CoverLetter.tex
+    open ~/Desktop/tex/Profile/CoverLetter.pdf
+
+    cd ~/Desktop/
+    echo -e "\e[33m[INFO] 😎 Cover letter generated successfully!\e[0m"
+}
+
 dotfile() {
     if [[ -z "$1" ]]; then
-        echo ">> ☢️  Need category babe"
+        echo ">> ☢️  Need category"
     fi
 
     if [[ "$1" == "nvim" ]]; then
@@ -196,12 +210,17 @@ o() {
 
 a() {
     if [[ -z "$1" ]]; then
-        echo ">> ☢️  Need a commit message babe"
+        echo ">> ☢️  Need a commit message"
         return 1
     fi
     git add .
     git commit -m "$1"
     git push
+}
+mysql_run_sql_file() {
+    python3 /pro/pysrc.py
+    mysql -u root -p
+    
 }
 
 clap() {
